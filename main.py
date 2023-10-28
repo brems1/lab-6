@@ -9,7 +9,14 @@ def encode(password_string):
         password += str(password_int)
     return password
 
-
+def decode(password):              # esther's decode function 
+    decoder = ""
+    for i in password:
+        password_decode = int(i)
+        password_decode -= 3
+        password_decode %= 10
+        decoder += str(password_decode)
+    return decoder
 
 def menu():
     password = True
